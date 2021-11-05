@@ -1,6 +1,6 @@
 {
-    "name": "itedo/itedo-logger",
-    "description": "itedo laravel logger",
+    "name": "itedo/think-itedo-logger",
+    "description": "itedo thinkphp logger",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -9,7 +9,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/hzp0szl/itedo-logger/issues"
+        "issues": "https://github.com/hzp0szl/think-itedo-logger/issues"
     },
     "require": {
         "php": "^7.0"
