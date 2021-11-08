@@ -35,21 +35,21 @@ class Config
      */
     public function openConfig()
     {
-        //设置debug开启模式
-        App::$debug = true;
-        //设置时区开始
-        Debug::remark('behavior_start', 'time');
+        //自定义配置
+        $itelog = ROOT_PATH . 'config/itelog.php';
+        ThinkConfig::load($itelog, 'itelog');
+        //防止全局关闭debug模式
+        if(ThinkConfig::get('itelog.logger')){
+            //设置debug开启模式
+            App::$debug = true;
+            //设置时区开始
+            Debug::remark('behavior_start', 'time');
+        }
 
         ############## 重载config配置 ##############
         $config = ROOT_PATH . 'config/config.php';
         // 设置类型 不用写入file，切换成test
         ThinkConfig::set('log.type', 'test');
         ThinkConfig::load($config, 'config');
-
-        ############## 开启数据库配置文件 ##############
-        $filename = ROOT_PATH . 'config/database.php';
-        // 开启debug模式
-        ThinkConfig::set('debug', false);
-        ThinkConfig::load($filename, 'database');
     }
 }

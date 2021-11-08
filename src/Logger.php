@@ -8,15 +8,21 @@ use think\Request;
 
 class Logger
 {
-    private $request;
-    public function __construct()
-    {
-        $this->request = Request::instance();
-    }
-
+    /**
+     * 执行
+     */
     public function run()
     {
-        $debug = ThinkLog::getLog();
-        dd($debug);
+        // 文件驱动
+        if(\config('itelog.driver') == 'file'){
+            Config::set('log.type', 'file');
+        }
+        // mongodb驱动
+        if(\config('itelog.driver') == 'mongodb'){
+            $dataSource = new DataSource();
+            $array = $dataSource->assemble()->toArray();
+            (new MongoDb())->into($array);
+        }
+
     }
 }

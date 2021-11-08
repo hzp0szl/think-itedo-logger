@@ -12,7 +12,8 @@
         "issues": "https://github.com/hzp0szl/think-itedo-logger/issues"
     },
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "topthink/think-mongo":"^1.*"
     },
     "autoload": {
         "psr-4": {
