@@ -13,7 +13,7 @@
     },
     "require": {
         "php": "^7.0",
-        "topthink/think-mongo":"^1.*"
+        "topthink/think-mongo": "1.*"
     },
     "autoload": {
         "psr-4": {
