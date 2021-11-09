@@ -51,7 +51,6 @@ return [
     'mongo' => [
         'hostname' => '127.0.0.1',// 服务器地址
         'database' => 'itedo',// 数据库名
-        'table' => 'itedo',// 数据库名
         'username' => 'root',// 用户名
         'prefix' => '',// 前缀
         'password' => '123',// 密码
