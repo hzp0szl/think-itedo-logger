@@ -38,7 +38,8 @@ class DataSource
      */
     public function assemble(): self
     {
-        $this->assembleStartTime()
+        $this->assembleSource()
+            ->assembleStartTime()
             ->assembleRequest()
             ->assembleHeaders()
             ->assembleResource()
@@ -48,6 +49,17 @@ class DataSource
             ->assembleInfo()
             ->assembleError();
 
+        return $this;
+    }
+
+    /**
+     * 数据来源
+     *
+     * @return $this
+     */
+    private function assembleSource(): self
+    {
+        $this->result['source'] = 'think-itedo-logger';
         return $this;
     }
 

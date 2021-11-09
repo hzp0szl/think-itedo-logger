@@ -1,4 +1,5 @@
 <?php
+
 namespace IteLog;
 
 use think\App;
@@ -14,15 +15,14 @@ class Logger
     public function run()
     {
         // 文件驱动
-        if(\config('itelog.driver') == 'file'){
+        if (\config('itelog.driver') == 'file') {
             Config::set('log.type', 'file');
         }
         // mongodb驱动
-        if(\config('itelog.driver') == 'mongodb'){
+        if (\config('itelog.driver') == 'mongodb') {
             $dataSource = new DataSource();
             $array = $dataSource->assemble()->toArray();
             (new MongoDb())->into($array);
         }
-
     }
 }

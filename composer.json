@@ -1,26 +1,26 @@
 {
-    "name": "itedo/think-itedo-logger",
-    "description": "itedo thinkphp logger",
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Just itedo",
-            "email": "5575165@qq.com"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/hzp0szl/think-itedo-logger/issues"
-    },
-    "require": {
-        "php": "^7.0",
-        "topthink/think-mongo": "1.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "IteLog\\": "src/"
-        }
-    },
-    "extra": {
+  "name": "itedo/think-itedo-logger",
+  "description": "itedo thinkphp logger",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Just itedo",
+      "email": "5575165@qq.com"
     }
+  ],
+  "support": {
+    "issues": "https://github.com/hzp0szl/think-itedo-logger/issues"
+  },
+  "require": {
+    "php": "^7.0",
+    "topthink/think-mongo": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "IteLog\\": "src/"
+    }
+  },
+  "extra": {
+  }
 }
 

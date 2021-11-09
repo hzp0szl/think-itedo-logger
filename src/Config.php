@@ -39,7 +39,7 @@ class Config
         $itelog = ROOT_PATH . 'config/itelog.php';
         ThinkConfig::load($itelog, 'itelog');
         //防止全局关闭debug模式
-        if(ThinkConfig::get('itelog.logger')){
+        if (ThinkConfig::get('itelog.logger')) {
             //设置debug开启模式
             App::$debug = true;
             //设置时区开始

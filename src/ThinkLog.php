@@ -1,4 +1,5 @@
 <?php
+
 namespace IteLog;
 
 use \think\Log;
@@ -25,14 +26,14 @@ class ThinkLog extends Log
     {
         $infoArray = [];
         foreach (ThinkLog::getLog('info') as $info) {
-            if(is_array($info) || !(strpos($info,' ] ') !== false)){
+            if (is_array($info) || !(strpos($info, ' ] ') !== false)) {
                 $infoArray['printInfo'][] = $info;
                 continue;
             }
-            if(strpos($info,'ROUTE') !== false
-                ||strpos($info,'HEADER') !== false
-                ||strpos($info,'PARAM') !== false
-                || strpos($info,'SESSION') !== false){
+            if (strpos($info, 'ROUTE') !== false
+                || strpos($info, 'HEADER') !== false
+                || strpos($info, 'PARAM') !== false
+                || strpos($info, 'SESSION') !== false) {
                 continue;
             }
             $infoArray['info'][] = $info;
