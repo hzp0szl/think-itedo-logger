@@ -21,6 +21,6 @@ class MongoDb
         $config = config('itelog.mongo');
         $config['type'] = '\think\mongo\Connection';
         $mongo = Db::connect($config);
-        $mongo->name('ite_logger')->insert($data);
+        $mongo->name(config('itelog.mongo_table'))->insert($data);
     }
 }
