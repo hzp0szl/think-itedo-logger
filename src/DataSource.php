@@ -146,7 +146,7 @@ class DataSource
             'serverInfo' => $pdo->serverInfo(),
             'connectionStatus' => $pdo->connectionStatus(),
             'serverVersion' => $pdo->serverVersion(),
-            'sqlArr' => ThinkLog::getLog('sql'),
+            'sqlArr' => array_map('strtolower',ThinkLog::getLog('sql')),
             'timeStr' => $this->timeStr(),
             'memoryStr' => $this->memoryStr(),
             'fileLoad' => $this->fileLoad(),
