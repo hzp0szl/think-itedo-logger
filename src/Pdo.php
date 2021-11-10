@@ -35,7 +35,13 @@ class Pdo
         } else {
             $params = $this->params;
         }
-        $this->pdo = new ThinkPDO('mysql::memory:', $config['username'], $config['password'], $params);
+        $this->pdo = new ThinkPDO(
+            "mysql:host={$config['hostname']}:{$config['hostport']};dbname={$config['database']};charset={$config['charset']};",
+            $config['username'],
+            $config['password'],
+            $params
+        );
+
     }
 
     /**
