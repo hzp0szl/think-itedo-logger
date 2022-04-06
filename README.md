@@ -63,3 +63,6 @@ return [
 
 ### Mongodb驱动时配置
 需配置php扩展  php_mongodb
+
+### Mongodb效果图
+![e8efc121fd7ebfef260b2c913471f04](https://user-images.githubusercontent.com/25895643/161927827-37e95de2-c86a-4c10-bba1-83d29b7ff0c4.png)
